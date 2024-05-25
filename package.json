@@ -1,6 +1,6 @@
 {
 	"name": "tree-chain",
-	"version": "1.0.0-0",
+	"version": "1.0.0-1",
 	"description": "A data structure in which each tree node is sequentially concatenated into a linked list based on a tree structure for Typescript",
 	"main": "build/esm/index.min.js",
 	"common": "build/cjs",
