@@ -1,10 +1,10 @@
 # tree-chain
 
-A data structure in which each tree node is sequentially concatenated into a linked list based on a tree structure for Typescript. Support node inserting, deleting, moving, and supporting flat the tree to an array.
+A data structure in which each tree node is sequentially concatenated into a linked list based on a tree structure for Typescript. Support node **inserting**, **deleting**, **moving**, and supporting **flat the tree to an array**.
 
 Structure image:
 
-![Structure_Image](https://github.com/Xekin97/tree-chain/assets/25792845/c4bafe01-57f2-435a-b564-9d3fed363d4f)
+![Structure_Image](https://github.com/Xekin97/tree-chain/assets/25792845/5b5032cf-9ee3-4370-bad1-599a8e1c6208)
 
 ## start
 
