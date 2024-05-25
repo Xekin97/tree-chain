@@ -15,9 +15,9 @@ export class TreeChainNode<Data extends CommonObject> {
 	siblingNextNode?: TreeChainNode<Data>;
 	childNodes: TreeChainNode<Data>[] = [];
 
-	detachCallbacks: ((node: TreeChainNode<Data>) => {})[] = [];
-	InsertCallbacks: ((node: TreeChainNode<Data>) => {})[] = [];
-	destroyCallbacks: ((node: TreeChainNode<Data>) => {})[] = [];
+	protected detachCallbacks: ((node: TreeChainNode<Data>) => {})[] = [];
+	protected insertCallbacks: ((node: TreeChainNode<Data>) => {})[] = [];
+	protected destroyCallbacks: ((node: TreeChainNode<Data>) => {})[] = [];
 
 	protected _includeNodes: TreeChainNode<Data>[] = [];
 	get includeNodes() {
@@ -100,7 +100,7 @@ export class TreeChainNode<Data extends CommonObject> {
 	}
 
 	protected takeInsertCallbacks() {
-		this.InsertCallbacks.forEach((cb) => cb(this));
+		this.insertCallbacks.forEach((cb) => cb(this));
 	}
 
 	protected takeDestroyCallbacks() {
@@ -111,7 +111,7 @@ export class TreeChainNode<Data extends CommonObject> {
 		this.detachCallbacks.push(callback);
 	}
 	onInsert(callback: (node: TreeChainNode<Data>) => {}) {
-		this.InsertCallbacks.push(callback);
+		this.insertCallbacks.push(callback);
 	}
 	onDestroy(callback: (node: TreeChainNode<Data>) => {}) {
 		this.destroyCallbacks.push(callback);
