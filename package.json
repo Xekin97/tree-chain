@@ -1,14 +1,19 @@
 {
 	"name": "tree-chain",
-	"version": "1.0.0",
+	"version": "1.0.0-0",
 	"description": "A data structure in which each tree node is sequentially concatenated into a linked list based on a tree structure for Typescript",
 	"main": "build/esm/index.min.js",
 	"common": "build/cjs",
 	"module": "build/esm",
 	"types": "build/types/index.d.ts",
+	"files": [
+		"build/*"
+	],
 	"scripts": {
 		"test": "jest",
-		"build": "rm -rf ./build && rollup -c"
+		"build": "rm -rf ./build && rollup -c",
+		"rel-fix": "npm version prerelease && npm publish --registry https://registry.npmjs.org/",
+		"rel-feat": "npm version prepatch && npm publish --registry https://registry.npmjs.org/"
 	},
 	"keywords": [
 		"tree-chain",
@@ -18,6 +23,11 @@
 		"data structure",
 		"typescript"
 	],
+	"homepage": "https://github.com/Xekin97/tree-chain",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Xekin97/tree-chain.git"
+	},
 	"author": "xekin",
 	"license": "ISC",
 	"devDependencies": {
